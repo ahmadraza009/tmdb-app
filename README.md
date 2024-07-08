@@ -9,6 +9,15 @@ To run the app: Run npm install.
 Replace token in environment.ts with your own from TMDB
 Run ng serve
 
+Architecture:
+
+- App divided into modules for features
+- Lazily loaded modules for improved performance
+- Shared components for common UI
+- State management using signals and RxJs
+- Seperate data services to communicate with API
+- HTTP interceptors for auth mechanism
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
