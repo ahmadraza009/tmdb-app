@@ -1,0 +1,40 @@
+<div class="container" *ngIf="selectedMovie() as movie">
+  <div class="info-container">
+    <mat-card class="poster" appearance="outlined">
+      <img
+        class="poster"
+        mat-card-image
+        src="{{
+          movie.poster_path
+            ? baseImgPath + '/' + movie.poster_path
+            : unavailable
+        }}"
+        alt="Photo"
+      />
+    </mat-card>
+    <div class="movie-info">
+      <div class="title-and-date">
+        <h2>{{ movie.title }}</h2>
+        <div class="other-info">
+          <span>{{ movie.release_date | date }}</span>
+          <span> - {{ getGenres() }}</span>
+          <span> - {{ movie.runtime }} mins</span>
+        </div>
+      </div>
+
+      <div class="bold">User Rating: {{ movie.vote_average?.toFixed(2) }}</div>
+      <div class="bold">Status: {{ movie.status }}</div>
+      <div>
+        <div class="bold">Overview</div>
+        <div>{{ movie.overview }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cast-and-crew">
+    <app-cast-list
+      [cast]="movie.credits?.cast!"
+      [crew]="movie.credits?.crew!"
+    ></app-cast-list>
+  </div>
+</div>

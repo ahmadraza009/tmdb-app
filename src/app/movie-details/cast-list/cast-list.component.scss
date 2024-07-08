@@ -1,0 +1,20 @@
+img {
+  height: 450px;
+}
+
+.poster,
+.content {
+  width: 100%;
+  max-width: 300px;
+}
+
+.cast {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.title {
+  text-align: center;
+}

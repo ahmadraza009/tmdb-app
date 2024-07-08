@@ -1,0 +1,30 @@
+.toolbar-container {
+  gap: 24px;
+  height: 60px;
+  background-color: rgba(2, 37, 65, 1);
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+
+  .menu-icon {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .search-block {
+    display: flex;
+    gap: 4px;
+    min-width: 300px;
+
+    .search-ctrl {
+      width: 100%;
+    }
+  }
+}

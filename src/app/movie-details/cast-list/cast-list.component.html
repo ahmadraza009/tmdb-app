@@ -1,0 +1,47 @@
+<ng-container>
+  <h2 class="title">Cast</h2>
+  <div class="cast" *ngIf="cast.length > 0">
+    <ng-container *ngFor="let credit of cast">
+      <mat-card appearance="outlined">
+        <img
+          class="poster"
+          mat-card-image
+          src="{{
+            credit.profile_path
+              ? baseImgPath + '/' + credit.profile_path
+              : unavailable
+          }}"
+          alt="Photo"
+        />
+        <mat-card-content class="content">
+          <p class="title">
+            {{ credit.name }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+
+  <h2 class="title">Crew</h2>
+  <div class="cast" *ngIf="crew.length > 0">
+    <ng-container *ngFor="let credit of crew">
+      <mat-card appearance="outlined">
+        <img
+          class="poster"
+          mat-card-image
+          src="{{
+            credit.profile_path
+              ? baseImgPath + '/' + credit.profile_path
+              : unavailable
+          }}"
+          alt="Photo"
+        />
+        <mat-card-content class="content">
+          <p class="title">
+            {{ credit.name }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+</ng-container>

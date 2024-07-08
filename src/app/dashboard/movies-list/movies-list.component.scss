@@ -1,0 +1,20 @@
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.movies {
+  display: flex;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: space-around;
+}
+
+.no-results {
+  padding: 60px;
+  font-weight: 700;
+  font-size: 18px;
+}

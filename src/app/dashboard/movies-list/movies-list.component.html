@@ -1,0 +1,20 @@
+<ng-container>
+  <div *ngIf="!searchText" class="page-title">{{ pageTitle }}</div>
+  <div *ngIf="searchText" class="page-title">
+    Showing results for {{ searchText }}
+  </div>
+  <div class="movies" *ngIf="movies.length > 0; else noResults">
+    <ng-container *ngFor="let movie of movies">
+      <app-movie-card
+        [imageSrc]="movie.poster_path!"
+        [title]="movie.title!"
+        [releaseDate]="movie.release_date!"
+        [id]="movie.id!"
+      ></app-movie-card>
+    </ng-container>
+  </div>
+
+  <ng-template #noResults>
+    <div class="no-results">No Results Found</div>
+  </ng-template>
+</ng-container>

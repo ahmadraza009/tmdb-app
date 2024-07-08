@@ -1,0 +1,17 @@
+<mat-toolbar class="toolbar-container">
+  <div class="menu-icon" (click)="goToDashboard()">
+    <mat-icon>local_movies</mat-icon><span class="title">TMDB</span>
+  </div>
+  <div class="search-block">
+    <input
+      class="search-ctrl"
+      type="text"
+      placeholder="Search"
+      [(ngModel)]="searchText"
+      #searchbar
+    />
+    <button (click)="search()">
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
