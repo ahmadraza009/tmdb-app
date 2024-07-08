@@ -5,7 +5,9 @@ Suppports text search for movie titles and display movie details with cast and c
 A demo video inside demo folder
 
 Use of Angular Material to display movie tiles
-To run the app: You need to replace token in environment.ts with your own from TMDB and then run ng serve
+To run the app: Run npm install.
+Replace token in environment.ts with your own from TMDB
+Run ng serve
 
 ## Development server
 
